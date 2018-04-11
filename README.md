@@ -21,6 +21,9 @@ yarn eslint src/*.js
 ## Flow
 
 ```bash
+yarn add flow-bin --dev
+yarn global add flow-typed
+flow-typed install jest@22.4.3
 flow init
 flow coverage src/*.js
 flow coverage -pretty src/*.js

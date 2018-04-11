@@ -14,10 +14,12 @@ echo "$magenta==== jest tests $reset"
 yarn jest
 
 echo "$yellow==== flow type checks $reset"
-flow
+./node_modules/.bin/flow
 
 echo "$magenta==== flow coverage $reset"
-flow coverage --pretty src/index.js
+./node_modules/.bin/flow coverage --pretty src/index.js
+# ./node_modules/.bin/flow coverage --pretty src/index.test.js
+
 
 echo "$cyan==== linting $reset"
 yarn eslint src/*.js
