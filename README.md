@@ -26,3 +26,9 @@ flow coverage src/*.js
 flow coverage -pretty src/*.js
 ```
 
+## Testing with Jest
+
+```bash
+yarn add jest --dev
+yarn jest
+```

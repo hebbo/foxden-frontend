@@ -10,17 +10,21 @@ cyan=`tput setaf 6`
 white=`tput setaf 7`
 reset=`tput sgr0`
 
+echo "$magenta==== jest tests $reset"
+yarn jest
+
 echo "$yellow==== flow type checks $reset"
 flow
 
 echo "$magenta==== flow coverage $reset"
-flow coverage --pretty src/*.js
+flow coverage --pretty src/index.js
 
 echo "$cyan==== linting $reset"
 yarn eslint src/*.js
 
 echo "$blue==== code formatter $reset"
-prettier --write src/*.js
+prettier --write src/index.js
+prettier --write src/index.test.js
 
 echo -e "\n\n$green 😎 Successful!! $reset"
 
