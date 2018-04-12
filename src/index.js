@@ -44,10 +44,11 @@ function PostComponent(props: {
   users: Array<User>,
   getUserFunction: (Array<User>, string) => ?User
 }) {
-  let post_user = props.getUserFunction(props.users, props.post.userId);
+  let { post } = props;
+  let post_user = props.getUserFunction(props.users, post.userId);
   return (
     <div>
-      <img src={props.post.imageUrl} alt={props.post.description} />
+      <img src={post.imageUrl} alt={post.description} />
       <p>{post_user ? post_user.username : "Anonymus"}</p>
     </div>
   );
