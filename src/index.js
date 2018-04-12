@@ -22,13 +22,23 @@ type FoxData = {
 
 type Props = { data: FoxData };
 
+function getUserByID(users: Array<User>, id: string): ?User {
+  return users.find(user => user.id === id) || null;
+}
+
 class App extends Component<Props, {}> {
   render() {
     return this.props.data.posts.map(post => this.renderPost(post));
   }
 
   renderPost(post: Post) {
-    return <img src={post.imageUrl} key={post.id} alt={post.description} />;
+    let post_user = getUserByID(this.props.data.users, post.userId);
+    return (
+      <div>
+        <img src={post.imageUrl} key={post.id} alt={post.description} />
+        <p>{post_user ? post_user.username : "Anonymus"}</p>
+      </div>
+    );
   }
 }
 
