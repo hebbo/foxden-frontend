@@ -22,24 +22,35 @@ type FoxData = {
 
 type Props = { data: FoxData };
 
-function getUserByID(users: Array<User>, id: string): ?User {
-  return users.find(user => user.id === id) || null;
-}
-
 class App extends Component<Props, {}> {
   render() {
-    return this.props.data.posts.map(post => this.renderPost(post));
+    return this.props.data.posts.map(this_post => (
+      <PostComponent
+        key={this_post.id}
+        post={this_post}
+        users={this.props.data.users}
+        getUserFunction={this.getUserByID}
+      />
+    ));
   }
 
-  renderPost(post: Post) {
-    let post_user = getUserByID(this.props.data.users, post.userId);
-    return (
-      <div>
-        <img src={post.imageUrl} key={post.id} alt={post.description} />
-        <p>{post_user ? post_user.username : "Anonymus"}</p>
-      </div>
-    );
+  getUserByID(users: Array<User>, id: string): ?User {
+    return users.find(user => user.id === id) || null;
   }
+}
+
+function PostComponent(props: {
+  post: Post,
+  users: Array<User>,
+  getUserFunction: (Array<User>, string) => ?User
+}) {
+  let post_user = props.getUserFunction(props.users, props.post.userId);
+  return (
+    <div>
+      <img src={props.post.imageUrl} alt={props.post.description} />
+      <p>{post_user ? post_user.username : "Anonymus"}</p>
+    </div>
+  );
 }
 
 const appRoot = document.getElementById("root");
