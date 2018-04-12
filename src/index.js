@@ -22,6 +22,10 @@ type FoxData = {
 
 type Props = { data: FoxData };
 
+function getUserByID(users: Array<User>, id: string): ?User {
+  return users.find(user => user.id === id) || null;
+}
+
 class App extends Component<Props, {}> {
   render() {
     return this.props.data.posts.map(this_post => (
@@ -29,13 +33,9 @@ class App extends Component<Props, {}> {
         key={this_post.id}
         post={this_post}
         users={this.props.data.users}
-        getUserFunction={this.getUserByID}
+        getUserFunction={getUserByID}
       />
     ));
-  }
-
-  getUserByID(users: Array<User>, id: string): ?User {
-    return users.find(user => user.id === id) || null;
   }
 }
 
