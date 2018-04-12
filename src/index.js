@@ -27,7 +27,11 @@ class App extends Component<Props, {}> {
     super(props);
   }
   render() {
-    return <div>{this.props.data.posts[0].description}</div>;
+    return this.props.data.posts.map(post => this.renderPost(post));
+  }
+
+  renderPost(post: Post) {
+    return <img src={post.imageUrl} />;
   }
 }
 
