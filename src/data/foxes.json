@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": "577ba6ef",
+      "userId": "01",
+      "imageUrl": "https://randomfox.ca/images/1.jpg",
+      "description": "Snow floof"
+    },
+    {
+      "id": "b8ca9f15",
+      "userId": "01",
+      "imageUrl": "https://randomfox.ca/images/2.jpg",
+      "description": "Smiley floof"
+    },
+    {
+      "id": "ea14e88f",
+      "userId": "01",
+      "imageUrl": "https://randomfox.ca/images/3.jpg",
+      "description": "Papa floof"
+    },
+    {
+      "id": "6000da01",
+      "userId": "01",
+      "imageUrl": "https://randomfox.ca/images/4.jpg",
+      "description": "Stacked floofs"
+    },
+    {
+      "id": "9541977a",
+      "userId": "01",
+      "imageUrl": "https://randomfox.ca/images/5.jpg",
+      "description": "Mama floof"
+    },
+    {
+      "id": "5715ed0b",
+      "userId": "02",
+      "imageUrl": "https://randomfox.ca/images/6.jpg",
+      "description": "Photogenic floof"
+    },
+    {
+      "id": "d3a9828a",
+      "userId": "02",
+      "imageUrl": "https://randomfox.ca/images/7.jpg",
+      "description": "Curious floof"
+    },
+    {
+      "id": "2fbe817c",
+      "userId": "02",
+      "imageUrl": "https://randomfox.ca/images/8.jpg",
+      "description": "Bloof"
+    },
+    {
+      "id": "2a6ca4ff",
+      "userId": "02",
+      "imageUrl": "https://randomfox.ca/images/9.jpg",
+      "description": "Good floof"
+    },
+    {
+      "id": "6cbe1c74",
+      "userId": "02",
+      "imageUrl": "https://randomfox.ca/images/10.jpg",
+      "description": "Lone floof"
+    }
+  ],
+  "users": [
+    {
+      "id": "01",
+      "username": "The Rock"
+    },
+    {
+      "id": "02",
+      "username": "XXX"
+    }
+  ]
+}
