@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
- // @flow
+// @flow
 
 describe("render", () => {
   test("mock test", () => {

@@ -25,11 +25,11 @@ echo "$magenta==== flow coverage $reset"
 
 
 echo "$cyan==== linting $reset"
-yarn eslint src/*.js
+./node_modules/.bin/eslint src/*.js
 
 echo "$blue==== code formatter $reset"
-prettier --write src/index.js
-prettier --write src/index.test.js
+./node_modules/.bin/prettier --write src/index.js
+./node_modules/.bin/prettier --write src/index.test.js
 
 echo -e "\n\n$green 😎 Successful!! $reset"
 
