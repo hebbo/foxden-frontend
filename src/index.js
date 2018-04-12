@@ -56,3 +56,8 @@ function PostComponent(props: {
 
 const appRoot = document.getElementById("root");
 appRoot && ReactDOM.render(<App data={foxesData} />, appRoot);
+
+// This just exports the variables so we can test them with jest
+module.exports = {
+  PostComponent
+};
