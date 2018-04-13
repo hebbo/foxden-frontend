@@ -8,7 +8,7 @@ import Enzyme, { shallow } from "enzyme";
 
 import { shallowToJson } from "enzyme-to-json";
 
-import { PostComponent, App, getUserByID } from "./foxden/foxden";
+import { PostComponent, App, getUserByID } from "../../foxden/foxden";
 
 Enzyme.configure({ adapter: new Adapter() });
 

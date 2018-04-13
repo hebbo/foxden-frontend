@@ -29,7 +29,7 @@ echo "$cyan==== linting $reset"
 
 echo "$blue==== code formatter $reset"
 ./node_modules/.bin/prettier --write src/index.js
-./node_modules/.bin/prettier --write src/index.test.js
+./node_modules/.bin/prettier --write src/__tests__/foxden/foxden.test.js
 ./node_modules/.bin/prettier --write src/foxden/foxden.js
 
 echo -e "\n\n$green 😎 Successful!! $reset"
