@@ -12,28 +12,24 @@ import { PostComponent, App, getUserByID } from "../../foxden/foxden";
 
 Enzyme.configure({ adapter: new Adapter() });
 
+const foxData: Object = JSON.parse(
+  '{"posts":[{"id":"6cbe1c74","userId":"02","imageUrl":"https://randomfox.ca/images/10.jpg","description":"Lonefloof"}],"users":[{"id":"02","username":"XXX"}]}'
+);
+
 describe("App", () => {
   it("should render correctly", () => {
-    let props: Object = JSON.parse(
-      '{"posts":[{"id":"6cbe1c74","userId":"02","imageUrl":"https://randomfox.ca/images/10.jpg","description":"Lonefloof"}],"users":[{"id":"02","username":"XXX"}]}'
-    );
-
-    const output = shallow(<App data={props} />);
+    const output = shallow(<App data={foxData} />);
     expect(shallowToJson(output)).toMatchSnapshot();
   });
 });
 
 describe("PostComponent", () => {
   it("should render correctly", () => {
-    let props: Object = JSON.parse(
-      '{"posts":[{"id":"6cbe1c74","userId":"02","imageUrl":"https://randomfox.ca/images/10.jpg","description":"Lonefloof"}],"users":[{"id":"02","username":"XXX"}]}'
-    );
-
     const output = shallow(
       <PostComponent
-        key={props.posts[0].id}
-        post={props.posts[0]}
-        users={props.users}
+        key={foxData.posts[0].id}
+        post={foxData.posts[0]}
+        users={foxData.users}
         getUserFunction={getUserByID}
       />
     );
@@ -43,10 +39,6 @@ describe("PostComponent", () => {
 
 describe("getUserByID", () => {
   test("extract user correctly", () => {
-    let foxData: Object = JSON.parse(
-      '{"posts":[{"id":"6cbe1c74","userId":"02","imageUrl":"https://randomfox.ca/images/10.jpg","description":"Lonefloof"}],"users":[{"id":"02","username":"XXX"}]}'
-    );
-
     let actual = { id: "02", username: "XXX" };
     expect(getUserByID(foxData.users, "02")).toEqual(actual);
   });
