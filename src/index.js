@@ -1,12 +1,8 @@
 // @flow
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-
-class App extends Component<{}, {}> {
-  render() {
-    return <div>Hello World!</div>;
-  }
-}
+import foxesData from "./data/foxes.json";
+import { App } from "./foxden/foxden";
 
 const appRoot = document.getElementById("root");
-appRoot && ReactDOM.render(<App />, appRoot);
+appRoot && ReactDOM.render(<App data={foxesData} />, appRoot);
