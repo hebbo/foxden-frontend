@@ -12,12 +12,6 @@ import { PostComponent, App, getUserByID } from "./foxden/foxden";
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe("render", () => {
-  test("mock test", () => {
-    expect(true).toEqual(true);
-  });
-});
-
 describe("App", () => {
   it("should render correctly", () => {
     let props: Object = JSON.parse(
@@ -44,5 +38,16 @@ describe("PostComponent", () => {
       />
     );
     expect(shallowToJson(output)).toMatchSnapshot();
+  });
+});
+
+describe("getUserByID", () => {
+  test("extract user correctly", () => {
+    let foxData: Object = JSON.parse(
+      '{"posts":[{"id":"6cbe1c74","userId":"02","imageUrl":"https://randomfox.ca/images/10.jpg","description":"Lonefloof"}],"users":[{"id":"02","username":"XXX"}]}'
+    );
+
+    let actual = { id: "02", username: "XXX" };
+    expect(getUserByID(foxData.users, "02")).toEqual(actual);
   });
 });
