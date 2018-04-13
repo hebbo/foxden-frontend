@@ -21,7 +21,6 @@ echo "$yellow==== flow type checks $reset"
 
 echo "$magenta==== flow coverage $reset"
 ./node_modules/.bin/flow coverage --pretty src/index.js
-./node_modules/.bin/flow coverage --pretty src/index.test.js
 ./node_modules/.bin/flow coverage --pretty src/foxden/foxden.js
 
 

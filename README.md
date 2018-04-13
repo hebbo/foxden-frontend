@@ -27,6 +27,8 @@ yarn eslint src/*.js
 yarn add flow-bin --dev
 yarn global add flow-typed
 flow-typed install jest@22.4.3
+flow-typed install enzyme@3.3.0
+flow-typed install enzyme-adapter-react-16@1.1.1
 flow init
 flow coverage src/*.js
 flow coverage -pretty src/*.js

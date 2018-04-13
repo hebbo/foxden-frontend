@@ -20,7 +20,7 @@ describe("render", () => {
 
 describe("App", () => {
   it("should render correctly", () => {
-    let props = JSON.parse(
+    let props: Object = JSON.parse(
       '{"posts":[{"id":"6cbe1c74","userId":"02","imageUrl":"https://randomfox.ca/images/10.jpg","description":"Lonefloof"}],"users":[{"id":"02","username":"XXX"}]}'
     );
 
@@ -31,7 +31,7 @@ describe("App", () => {
 
 describe("PostComponent", () => {
   it("should render correctly", () => {
-    let props = JSON.parse(
+    let props: Object = JSON.parse(
       '{"posts":[{"id":"6cbe1c74","userId":"02","imageUrl":"https://randomfox.ca/images/10.jpg","description":"Lonefloof"}],"users":[{"id":"02","username":"XXX"}]}'
     );
 
