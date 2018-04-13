@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render correctly 1`] = `
+Array [
+  <PostComponent
+    getUserFunction={[Function]}
+    key="6cbe1c74"
+    post={
+      Object {
+        "description": "Lonefloof",
+        "id": "6cbe1c74",
+        "imageUrl": "https://randomfox.ca/images/10.jpg",
+        "userId": "02",
+      }
+    }
+    users={
+      Array [
+        Object {
+          "id": "02",
+          "username": "XXX",
+        },
+      ]
+    }
+  />,
+]
+`;
+
+exports[`PostComponent should render correctly 1`] = `
+<div>
+  <img
+    alt="Lonefloof"
+    src="https://randomfox.ca/images/10.jpg"
+  />
+  <p>
+    XXX
+  </p>
+</div>
+`;

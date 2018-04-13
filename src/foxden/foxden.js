@@ -54,4 +54,4 @@ function PostComponent(props: {
 }
 
 // This just exports the variables so we can test them with jest
-export {PostComponent, App};
+export { PostComponent, App, getUserByID };
